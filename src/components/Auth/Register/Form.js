@@ -24,7 +24,7 @@ const InnerForm = props => {
    );
 };
 
-// Wrap our form with the using withFormik HoC
+// Wrap our form using Formik HoC
 const RegisterForm = withFormik({
    // Transform outer props into form values
    mapPropsToValues: props => ({ email: '', password: '' }),
