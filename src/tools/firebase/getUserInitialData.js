@@ -1,7 +1,17 @@
 import firebase from './index';
 
 const db = firebase.firestore();
-
+db.collection("users").add({
+      first: "DJ",
+      last: "Turner",
+      email: "daniellejgilmore@gmail.com"
+  })
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
 let userId = '';
 let accIds = [];
 const initialData = {
