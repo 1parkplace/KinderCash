@@ -24,7 +24,7 @@ const withAuth = WrappedComponent => {
          if ((path === '/login' || path === '/register') && props.authStatus) {
             this.props.history.push('/panel');
          } else if (path.startsWith('/panel') && !props.authStatus) {
-            this.props.history.push('/login');
+            this.props.history.push('/panel');
          }
       }
 
