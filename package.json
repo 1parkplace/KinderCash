@@ -1,5 +1,5 @@
 {
-   "name": "react-bank",
+   "name": "KinderCash",
    "version": "0.1.0",
    "private": true,
    "dependencies": {
@@ -8,6 +8,7 @@
       "classnames": "^2.2.5",
       "date-fns": "^1.29.0",
       "firebase": "^5.0.1",
+      "firebase-tools": "^3.19.1",
       "formik": "^0.11.11",
       "jsonwebtoken": "^8.2.1",
       "promise": "8.0.1",
