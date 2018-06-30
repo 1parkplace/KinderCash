@@ -4,12 +4,12 @@ import '@firebase/firestore';
 
 // Initalize and export Firebase.
 const config = {
-    apiKey: 'AIzaSyDQ9Sk80Z_XMFeAapAeIZ4DDGrYgyTeUJA',
-    authDomain: 'dodyfamilybank.firebaseapp.com',
-    databaseURL: 'https://dodyfamilybank.firebaseio.com',
-    projectId: 'dodyfamilybank',
-    storageBucket: 'dodyfamilybank.appspot.com',
-    messagingSenderId: '102354476099'
+    apiKey: "AIzaSyCdV_CcP0ttiJSKsV0jHNNdYYAzPrnZNQc",
+    authDomain: "kinderkash-9c124.firebaseapp.com",
+    databaseURL: "https://kinderkash-9c124.firebaseio.com",
+    projectId: "kinderkash-9c124",
+    storageBucket: "kinderkash-9c124.appspot.com",
+    messagingSenderId: "143224641941"
 };
 
 firebase.initializeApp(config);
