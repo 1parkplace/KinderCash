@@ -29,7 +29,7 @@ exports.dashboard = function(req,res){
   //window.location.replace("https://desolate-springs-87096.herokuapp.com/");
 }
 
-exports.logout = function(req,res){
+exports.signout = function(req,res){
 
   req.session.destroy(function(err) {
   //res.redirect('/');
