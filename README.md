@@ -1,45 +1,63 @@
-# react-bank
+# ClinicPLUS Group Collaboration Project# 2 for UCSD Coding Bootcamp
+```
+Team Members: DJ Turner, Fernando Cely, Creative-Diego, and Andrew Edelstein
+```
+My Portion of the project goes as follows:
 
-Banking app built in React and Redux.
+Sign Up | Sign In | Log Out
 
-[Demo here](https://react-bank-f7cc8.firebaseapp.com/)<br />
-Login: email@example.com<br />
-Password: qwerty
+Using Passport With Sequelize, and JawsDB MySQL deployed to Heroku.
 
-## What's inside?
+Dependencies:
+Express
+Sequelize
+dotenv
+MySQL
+Passport
+Passport Local Strategy
+Body Parser
+Express Session
+Bcrypt Nodejs
+Express Handlebars for the views
 
-* Login/register
-* Accounts
-* Transactions + new transaction
-* Credit/debit cards + change PIN/limits
-* Internal messages
-* User profile incl. password change
-* Help form
-* Income change chart
-* Currency stats
-* Form validation, pagination, async routing
+Root Directory Map
+```
+  |_ server.js
+  |_ .env
+  |_ .gitignore
+  |_ package.json
+  |_ package-lock.json
+  |_ README.md
+  |_ app/folder
+  |     |_ config/folder
+  |     |             |_ passport/folder
+  |     |             |             |_ passport.js
+  |     |             |
+  |     |             |_ config.json
+  |     |             
+  |     |_ controllers/folder
+  |     |             |_authcontroller.js
+  |     |             
+  |     |_ models/folder
+  |     |             |_index.js
+  |     |             |_user.js
+  |     |             
+  |     |_ routes/folder
+  |     |             |_auth.js
+  |     |             
+  |     |_ views/folder
+  |                   |_signin.hbs
+  |                   |_signout.hbs
+  |                   |_signup.hbs
+  |                   
+  |_ node_modules/folder
+```
+To demo the login functionality please visit https://clinicplus.herokuapp.com
 
-![react-bank screenshot](screenshot.png?raw=true)
-
-## Some details
-Inspired by [Daily UI 30](https://symu.co/freebies/ui-kits-9/daily-ui-30-elements/) PSD files.<br />
-Moved to HTML5/CSS3 using Avocode ([link to HTML/CSS repo](https://github.com/jurkian/daily-ui-30-html)).
-
-Technologies:
-* React
-* Redux
-* Webpack
-* Sass
-* Bootstrap 3 (modified for em/rem support)
-* React Router
-* JWT tokens
-* recharts
-* react-dates
-* APIs: Firebase as database, Fixer.io for currency rates
-
-## How to use it?
-
-1. Install all dependencies `npm install`
-2. Put your Firebase configuration in `src/tools/firebase/index.js` (for development)
-3. Run `npm run start` to start a server and begin developing
-4. Run `npm run build` to create a build
+Team Member independent repos used to develop collab: 
+```
+https://github.com/fcely/EMR
+https://github.com/creativediego/cloudemr
+https://github.com/ASEdelstein/myIMD
+https://github.com/DJGilmore4U/iMD
+```
