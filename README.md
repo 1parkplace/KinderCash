@@ -1,6 +1,6 @@
-# ClinicPLUS Group Collaboration Project# 2 for UCSD Coding Bootcamp
+# KinderCash Group Collaboration Project# 3 for UCSD Coding Bootcamp
 ```
-Team Members: DJ Turner, Fernando Cely, Creative-Diego, and Andrew Edelstein
+Team Members: DJ Turner, Fernando Cely, Stenio Pereira, and Eric Nuanes
 ```
 My Portion of the project goes as follows:
 
@@ -52,12 +52,9 @@ Root Directory Map
   |                   
   |_ node_modules/folder
 ```
-To demo the login functionality please visit https://clinicplus.herokuapp.com
+To demo the login functionality please visit https://kindercash.herokuapp.com/
 
-Team Member independent repos used to develop collab: 
+Shared and Branched Repo
 ```
-https://github.com/fcely/EMR
-https://github.com/creativediego/cloudemr
-https://github.com/ASEdelstein/myIMD
-https://github.com/DJGilmore4U/iMD
+https://github.com/DJGilmore4U/KinderCash
 ```
