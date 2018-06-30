@@ -2,7 +2,7 @@ var authController = require('../controllers/authcontroller.js');
 
 module.exports = function(app,passport){
 
-app.get('/', authController.signin);
+app.get('/', authController.identity);
 
 app.get('/signup', authController.signup);
 
