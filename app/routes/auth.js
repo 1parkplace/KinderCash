@@ -20,11 +20,8 @@ app.post('/signup', passport.authenticate('local-signup',  { successRedirect: '/
 app.get('/dashboard',isLoggedIn, authController.dashboard);
 
 
-//app.get('/signout',authController.logout);
-app.get('/signout', function(req, res){
-    req.logout();
-    res.redirect('/signout');
-  });
+app.get('/signout',authController.logout);
+
 
 
 
