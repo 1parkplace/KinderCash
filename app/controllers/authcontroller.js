@@ -6,6 +6,9 @@ exports.signup = function(req,res){
 	res.render('signup'); 
 
 }
+exports.identity = function(req,res){
+  res.render('identity');
+}
 exports.signupERROR = function(req,res){
 
 	res.render('signupERROR'); 
