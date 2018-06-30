@@ -31,7 +31,7 @@ exports.dashboard = function(req,res){
 
 exports.logout = function(req,res){
 
-  req.logout(function(err) {
+  req.session.destroy(function(err) {
   //res.redirect('/');
   res.render('signout'); 
   });
