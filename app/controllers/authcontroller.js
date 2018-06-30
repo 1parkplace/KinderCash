@@ -24,8 +24,8 @@ exports.signinERROR = function(req,res){
 }
 
 exports.dashboard = function(req,res){
-  res.send('<script>window.location.href="https://afternoon-tundra-66682.herokuapp.com/";</script>');
-	//res.render('dashboard'); 
+  //res.send('<script>window.location.href="https://afternoon-tundra-66682.herokuapp.com/";</script>');
+	res.render('dashboard'); 
   //window.location.replace("https://desolate-springs-87096.herokuapp.com/");
 }
 
