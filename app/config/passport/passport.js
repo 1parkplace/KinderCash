@@ -32,6 +32,8 @@
     {           
       usernameField : 'email',
       passwordField : 'password',
+      firstnameField: 'firstname',
+      lastnameField: 'lastname',
       passReqToCallback : true // allows us to pass back the entire request to the callback
     },
 
@@ -107,7 +109,7 @@
     User.findOne({ where : { email: email}}).then(function (user) {
 
       if (!user) {
-        console.log('EMAIL DOESNT EXIST');
+        console.log('EMAIL DOES NOT EXIST');
         return done(null, false, { message: 'Email does not exist' });
       }
 
