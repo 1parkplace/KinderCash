@@ -4,12 +4,15 @@ module.exports = function(app,passport){
 
 app.get('/', authController.identify);
 
+
 app.get('/signup', authController.signup);
+
 
 app.get('/signupERROR', authController.signup);
 
 
 app.get('/signin', authController.signin);
+
 
 app.get('/signinERROR', authController.signin);
 
