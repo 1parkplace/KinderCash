@@ -2,13 +2,13 @@
  
  "development": {
 
-     "username": "sq6vji29as4zey8a",
+     "username": "root",
 
-     "password": "zkxonv4c7hf9i0zo",
+     "password": "root",
 
-     "database": "gzpd7dwapcp646gx",
+     "database": "kinder_cash",
 
-     "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+     "host": "127.0.0.1",
 
      "dialect": "mysql"
 
@@ -20,9 +20,9 @@
 
      "password": "root",
 
-     "database": "sequelize_passport",
+     "database": "kinder_cash",
 
-     "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+     "host": "127.0.0.1",
 
      "dialect": "mysql"
 
@@ -30,13 +30,13 @@
 
  "production": {
 
-    "username": "sq6vji29as4zey8a",
+    "username": "root",
 
-    "password": "zkxonv4c7hf9i0zo",
+    "password": "root",
 
-    "database": "gzpd7dwapcp646gx",
+    "database": "kinder_cash",
 
-    "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "host": "127.0.0.1",
 
     "dialect": "mysql"
 
