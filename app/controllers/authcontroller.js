@@ -31,16 +31,21 @@ exports.signinERROR = function(req,res){
 
 }
 
+exports.views_account_summary = function(req,res){
+  RES.RENDER('views_account_summary');
+  
+}
+
 exports.dashboard = function(req,res){
   //res.send('<script>window.location.href="https://afternoon-tundra-66682.herokuapp.com/";</script>');
 	res.render('dashboard'); 
-  //window.location.replace("https://desolate-springs-87096.herokuapp.com/");
+
 }
 
 exports.logout = function(req,res){
 
   req.session.destroy(function(err) {
-  //res.redirect('/');
+
   res.render('signout'); 
   });
 
