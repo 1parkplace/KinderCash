@@ -93,6 +93,13 @@ var account_json={
 
 
 
+// Route to Create new account for a user
+app.post("/accounts/new", function(req, res) {
+    db.accounts.create(req.body).then(function(result) {
+    res.redirect("/transactions/1");
+    });
+  
+    })
 
 
 
@@ -100,13 +107,7 @@ var account_json={
 
 
 
-
-
-
-
-
-
-
+//---------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------  
 
 function isLoggedIn(req, res, next) {

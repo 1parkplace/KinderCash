@@ -1,19 +1,54 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<html>
-<div class="container">
 
 
 
-<body>
 
-<div class="row mt-4">
+<body >
 
-<h2>Welcome </h2>
+<div class="row">
+<div class="col-3">
+<div class="card">
+
+
+<form class="well p-3" action="/accounts/new" method="POST"  >
+  <h3>Create Accounts</h3>
+
+  <input required id="user_id" name="user_id" type="hidden" value="1"> <!-- Work on a way to pull user information from the Json Object -->
+  <input required id="account_balance" name="account_balance" type="hidden" value="0"> <!-- Work on a way to pull user information from the Json Object -->
+  <div class="form-group">
+    <label for="account_desc">Account Name</label>
+    <input type="text" class="form-control" id="account_desc" name="account_desc" >
+
+    <label for="account_type">Account Type</label>
+    <input type="text" class="form-control" id="account_type" name="account_type" >
+ 
+
+ <label for="account_term">Term</label>
+    <input type="number" class="form-control" id="account_term" name="account_term">
+
+ <label for="account_rate">Interest Rate</label>
+    <input type="number" class="form-control" id="account_rate" name="account_rate">
+ 
+
+
+  </div>
+
+  
+  <button type="submit" class="btn-sm btn-primary">Submit</button>
+</form>
+
+</div>
+</div>
+
+
+<div class="col-9">
+
+<div class="card">
 
 
 <table class="table table-hover tablesorter" id="myTable">
-              <thead class="thead-light">
+              <thead class="green text-white">
                 <tr>
                     
                   <th scope="col">Account Name</th>
@@ -21,7 +56,7 @@
 									<th scope="col">Amount</th>
                   <th scope="col">Details</th>
                   <th scope="col">Balance</th>
-                  <th scope="col">Action</th>
+                  <th scope="col"></th>
 
                 	<th scope="col"></th>          
                 </tr>
@@ -33,11 +68,12 @@
 
 			<td> {{this.account_desc}}  </td>
 			<td> {{this.account_type}}  </td>
-      <td> <input type="text" id="amt" placeholder="trx_amt"> </td>
-      <td> <input type="text" id="details" placeholder="trx_details"> </td>
+      <td> <input type="text" class="amt" id={{this.account_id}} placeholder="trx_amt"> </td>
+      <td> <input type="text" class="details" id={{this.account_id}} placeholder="trx_details"> </td>
       <td> {{this.account_balance}} </td>     
-      <td> <button id="deposit" data-id="{{this.account_id}}" user_id={{this.user_id}} balance={{this.account_balance}}  class=" float-right ">Deposit</button> </td>
-      <td> <button id="withdrawal" data-id="{{this.account_id}}" user_id={{this.user_id}} balance={{this.account_balance}}  class=" float-right ">Withdraw</button> </td>
+      <td> <button id="d" data-id="{{this.account_id}}" user_id={{this.user_id}} balance={{this.account_balance}}  class="deposit float-right ">Deposit</button> </td>
+      <td> <button id="w" data-id="{{this.account_id}}" user_id={{this.user_id}} balance={{this.account_balance}}  class="withdrawal float-right ">Withdraw</button> </td>
+
   	</tr>
   {{/each}}
               
@@ -46,26 +82,30 @@
               </tbody>
             </table>
          
+
+
 </div>
-
-
-
+</div>
+</div>
 </body>
-</div>
 
-</html>
+
+
+
+
+
 
 <script>
 
 $(document).ready(function(){
 
-$("#deposit").on("click",function() {
+$(".deposit").on("click",function() {
 alert("hello world")
 jQuery.ajax({
           url: "/deposit",
           type: "POST",
           data: {account_id: $(this).attr("data-id"),  
-          trx_amt:parseFloat($("#amt").val()), 
+          trx_amt:parseFloat($(".amt #$(this).attr('data-id')").val()), 
           trx_type:"Deposit", 
           trx_details:$("#details").val(), 
           beg_bal:parseFloat($(this).attr("balance")), 
@@ -78,22 +118,18 @@ jQuery.ajax({
             }
           },
           success: function(result) {
- 	        console.log("Ajax Object")
+         console.log("Ajax Object")
           console.log(result)
          location.reload()
         
           }
 });      
 
-
-
 })
 
 
-
-
-$("#withdrawal").click(function() {
-
+$(".withdrawal").click(function() {
+alert("hello world")
 jQuery.ajax({
           url: "/withdrawal",
           type: "POST",
@@ -111,19 +147,16 @@ jQuery.ajax({
             }
           },
           success: function(result) {
- 	        console.log("Ajax Object")
+         console.log("Ajax Object")
           console.log(result)
          location.reload()
         
           }
 });      
 
-
-
 })
 
-
 })
-
 
 </script>
+
