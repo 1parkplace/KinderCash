@@ -120,6 +120,7 @@
       var userinfo = user.get();
 
       return done(null,userinfo);
+      console.log(userinfo);
 
     }).catch(function(err){
 

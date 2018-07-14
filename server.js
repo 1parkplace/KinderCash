@@ -16,22 +16,16 @@ app.use(bodyParser.json());
 
  // For Passport
 app.use(session({secret: 'keyboard cat', resave:true, saveUninitialized:true})); // session secret
+
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 
 
  //For Handlebars
- 
-//app.set('views', path.join(__dirname, 'app/views'));
-//app.engine('hbs', exphbs({extname: '.hbs'}));
-//app.set('view engine', '.hbs');
-
-
-app.use(express.static("app/public"));
-var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.set('views', path.join(__dirname, 'app/views'));
+app.engine('hbs', exphbs({extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
 
 

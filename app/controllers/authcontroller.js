@@ -6,9 +6,13 @@ exports.signup = function(req,res){
 	res.render('signup'); 
 
 }
+
 exports.identify = function(req,res){
+
   res.render('identify');
+
 }
+
 exports.signupERROR = function(req,res){
 
 	res.render('signupERROR'); 
@@ -20,6 +24,7 @@ exports.signin = function(req,res){
 	res.render('signin'); 
 
 }
+
 exports.signinERROR = function(req,res){
 
 	res.render('signinERROR'); 
