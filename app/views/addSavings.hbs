@@ -8,10 +8,10 @@
         {{/if}}
         <div class="tile tile-login">
             <h3 class="text-center" style="color: white">Sign Up</h3>
-            <form action="/admin/addbank" method="post">
+            <form action="/admin/addsavings" method="post">
                 <div class="input-icon">
                     <span class="fa-user fa"></span>
-                    <input type="text" name="bname" class="form-control" placeholder="Bank Name">
+                    <input type="text" name="bname" class="form-control" placeholder="Savings Name">
                 </div>
                 <br>
                 <a href="javascript:void(0)" class="login-button btn btn-block btn-primary btn-embossed">ADD ACCOUNT OR SAVINGS GOAL</a>
@@ -32,7 +32,7 @@
             {{#each data}}
                 <tr>
                     <td>{{id}}</td>
-                    <td>{{bankname}}</td>
+                    <td>{{savingsname}}</td>
                 </tr>
             {{/each}}
             </tbody>

@@ -105,12 +105,12 @@ input#submit:hover {
     background-color: #f2f2f2;
     max-width: 0px;
 }
-container {
+div {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     max-width: 300px;
-    
+    margin:auto;
 }
 /* Clear floats (clearfix hack) */
 .btn-group:after {
@@ -118,23 +118,20 @@ container {
     clear: both;
     display: table;
 }
-#panel {
-        display: inline-block;
-        align-content: center;
-}
 /* Add a background color on hover */
 .btn-group button:hover {
     background-color: #3e8e41;
 }
-</style>
-
+  </style>
+  <container>
 <div id="panel">
-    <h1>Welcome to<br>Kinder <span>&#8364;</span>ash</span><br>Are you a(n) ...</h1>
+    <h1>Welcome to Kinder <span>&#8364;</span>ash</span><br>Are you an ...</h1>
     <div class="btn-group">
-            <form method="get" id="parent" action="/login"><input type="submit" action="/login" value="Adult?" id="submit" /></form>
-            <span style="margin: 50px; color:#1ab869">&oscr;&#114; &#97;</span>
-            <form method="get" id="kid" action="/login"><input type="submit" action="/login" value="Kid?" id="submit" /></form>
+            <form method="get" id="parent" action="/signin"><input type="submit" action="/signin" value="Adult?" id="submit" /></form>
+            <span style="margin-left: 20px; color:#1ab869">&oscr;&#114; &#97;</span>
+            <form method="get" id="kid" action="/signin"><input type="submit" action="/signin" value="Kid?" id="submit" /></form>
           </div>
-    </div>
-
+</div>
+</container>
 </body>
+</html>

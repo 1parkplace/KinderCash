@@ -8,15 +8,19 @@ router.showHome = function(req, res){
     getSavings(function(res){
         SavingsList = res;
     });
-    res.render('index', { title: 'KinderCash - Beta',pageTitle:'Home',message:req.flash('message')});
+    res.render('index', { title: 'Welcome to Kinder&#8364;ash - Beta',pageTitle:'Home',message:req.flash('message')});
+};
+
+router.Identify = function(req,res){
+    res.render('identify');
 };
 
 router.showLogin = function (req, res) {
-    res.render('login',{pageTitle:'Login',currentUser: req.user, message: req.flash('loginMessage')});
+    res.render('login',{pageTitle:'Kinder&#8364;ash Login',currentUser: req.user, message: req.flash('loginMessage')});
 };
 
 router.showSignup = function (req, res) {
-    res.render('signup',{pageTitle:'Sign Up',currentUser: req.user, message: req.flash('signupMessage')});
+    res.render('signup',{pageTitle:'Kinder&#8364;ash Sign Up',currentUser: req.user, message: req.flash('signupMessage')});
 };
 
 var SavingsList = [];
