@@ -16,6 +16,8 @@ app.get('/signin', authController.signin);
 
 app.get('/signinERROR', authController.signin);
 
+app.get('/views_account_summary', authController.views_account_summary);
+
 
 app.post('/signup', passport.authenticate('local-signup',  { successRedirect: '/dashboard', failureRedirect: '/signupERROR'}));
 
