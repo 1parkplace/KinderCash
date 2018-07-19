@@ -11,6 +11,10 @@ router.showHome = function(req, res){
     res.render('index', { title: 'Welcome to Kinder&#8364;ash - Beta',pageTitle:'Home',message:req.flash('message')});
 };
 
+router.showChat= function(req,res){
+    res.render('chat');
+}
+
 router.Identify = function(req,res){
     res.render('identify');
 };

@@ -189,3 +189,45 @@ VALUES
 
 /*!40000 ALTER TABLE `withdraw` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+# Dump of table badges
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `badges`;
+
+CREATE TABLE `badges` (
+  `uid` int(11) NOT NULL,
+  `badge1` BOOLEAN DEFAULT false,
+  `badge2` BOOLEAN DEFAULT false,
+  `badge3` BOOLEAN DEFAULT false,
+  `badge4` BOOLEAN DEFAULT false,
+  `badge5` BOOLEAN DEFAULT false,
+  `badge6` BOOLEAN DEFAULT false,
+  `badge7` BOOLEAN DEFAULT false,
+  `badge8` BOOLEAN DEFAULT false,
+  `badge9` BOOLEAN DEFAULT false,
+  `badge10` BOOLEAN DEFAULT false,
+  `badge11` BOOLEAN DEFAULT false,
+  `badge12` BOOLEAN DEFAULT false,
+  `badge13` BOOLEAN DEFAULT false,
+  `badge14` BOOLEAN DEFAULT false,
+  `badge15` BOOLEAN DEFAULT false,
+  `badge16` BOOLEAN DEFAULT false,
+  `badge17` BOOLEAN DEFAULT false,
+  `badge18` BOOLEAN DEFAULT false,
+  `badge19` BOOLEAN DEFAULT false,
+  `badge20` BOOLEAN DEFAULT false,
+  
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `badges` WRITE;
+
+
+INSERT INTO `badges` (`uid`, `badge1`, `badge2`, `badge3`, `badge4`, `badge5`, `badge6`, `badge7`, `badge8`, `badge9`, `badge10`, `badge11`, `badge12`, `badge13`, `badge14`, `badge15`, `badge16`, `badge17`, `badge18`, `badge19`, `badge20` )
+VALUES
+	(1,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);
+
+
+
+UNLOCK TABLES;
