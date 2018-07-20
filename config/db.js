@@ -1,14 +1,14 @@
 module.exports = {
  
-    "development": {
-        "port"    : 3306,
-        "username": "root",
-        "password": "root",
-        "database": "kindercash",
-        "host": "locatlhost",
-        "dialect": "mysql",
-        multipleStatements: true
-    },
+    // "development": {
+    //     "port"    : 3306,
+    //     "username": "root",
+    //     "password": "root",
+    //     "database": "kindercash",
+    //     "host": "locatlhost",
+    //     "dialect": "mysql",
+    //     multipleStatements: true
+    // },
    
     "test": {
         "username": "root",
@@ -18,7 +18,7 @@ module.exports = {
         "dialect": "mysql"
     },
    
-    "production": {
+    "development": {
        "username": "sq6vji29as4zey8a",
        "password": "zkxonv4c7hf9i0zo",
        "database": "gzpd7dwapcp646gx",
