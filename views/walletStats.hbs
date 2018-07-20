@@ -1,11 +1,11 @@
 <div class="row">
-    <h3 class="text-center">Search Account Data</h3>
+    <h3 class="text-center">Search Your &#8364;ash Wallet Data</h3>
     {{#if message}}
         <div class="alert alert-primary">
             {{message}}
         </div>
     {{/if}}
-    <form action="/checking/stats" method="post">
+    <form action="/wallet/stats" method="post">
         <div class="col-md-4">
             <label for="sd">
                 Start Date:
@@ -35,9 +35,9 @@
             <br>
             <label>Show Results For:</label>
             <br>
-            <label for="add">Deposits </label>
+            <label for="add">Wallet Add </label>
             <input type="checkbox" name="add" value="1">&nbsp;&nbsp;
-            <label for="exp">Withdraws </label>
+            <label for="exp">Wallet Expenses </label>
             <input type="checkbox" name="exp" value="1">
             <br>
             <a href="javascript:void(0)" class="login-button btn btn-block btn-primary btn-embossed"><i class="fa fa-search"></i> Search</a>
@@ -50,11 +50,11 @@
 <div class="row">
     {{#if addData}}
         <div class="col-md-6">
-            <h3 class="text-center">Deposit Results</h3>
+            <h3 class="text-center">Wallet Add Results</h3>
             <table class="table table-bordered text-center" id="add">
                 <thead>
                 <tr>
-                    <th class="text-center">Amount ($)</th>
+                    <th class="text-center">Amount (৳)</th>
                     <th class="text-center">Description</th>
                     <th class="text-center">Date</th>
                 </tr>
@@ -70,16 +70,16 @@
                 </tbody>
             </table>
             <br>
-            Sum: {{addSum}} $
+            Sum: {{addSum}} ৳
         </div>
     {{/if}}
     {{#if expData}}
         <div class="col-md-6">
-            <h3 class="text-center">Withdraw Results</h3>
+            <h3 class="text-center">Wallet Expenses Results</h3>
             <table class="table table-bordered text-center" id="exp">
                 <thead>
                 <tr>
-                    <th class="text-center">Amount ($)</th>
+                    <th class="text-center">Amount (৳)</th>
                     <th class="text-center">Description</th>
                     <th class="text-center">Date</th>
                 </tr>
@@ -95,7 +95,7 @@
                 </tbody>
             </table>
             <br>
-            Sum: {{expSum}} $
+            Sum: {{expSum}} ৳
         </div>
     {{/if}}
 </div>

@@ -7,16 +7,16 @@
             </div>
         {{/if}}
         <div class="tile tile-login">
-            <h3 class="text-center" style="color: white">Add account goals!</h3>
+            <h3 class="text-center" style="color: white">Add My ACCOUNT OR SAVINGS GOAL</h3>
             <br>
-            <form action="{{homeUrl}}/mysavings" method="post">
+            <form action="{{homeUrl}}/mybanks" method="post">
                 <div class="form-group">
                     <div class="input-icon">
-                        <span class="fa-savings fa"></span>
-                        <select name="savings" id="" class="">
+                        <span class="fa-bank fa"></span>
+                        <select name="bank" id="" class="">
                             <option value="">Select Your ACCOUNT</option>
-                            {{#each savings}}
-                                <option value="{{id}}">{{savingsname}}</option>
+                            {{#each bank}}
+                                <option value="{{id}}">{{bankname}}</option>
                             {{/each}}
                         </select>
                     </div>
@@ -28,17 +28,17 @@
                 </div>
 
                 <br>
-                <a href="javascript:void(0)" class="login-button btn btn-block btn-primary btn-embossed">Add account goals.</a>
+                <a href="javascript:void(0)" class="login-button btn btn-block btn-primary btn-embossed">ADD ACCOUNT OR SAVINGS GOAL</a>
             </form>
         </div>
     </div>
     <div class="col-md-8">
-        {{#if mySavings}}
+        {{#if myBank}}
             <h3 class="text-center">My ACCOUNTS</h3>
             <table class="table table-bordered text-center">
                 <thead>
                 <tr>
-                    <th class="text-center">Account Name</th>
+                    <th class="text-center">ACCOUNT Name</th>
                     <th class="text-center">Current Balance (৳)</th>
                     <th class="text-center">Deposit</th>
                     <th class="text-center">Withdraw</th>
@@ -46,13 +46,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{#each mySavings}}
+                {{#each myBank}}
                     <tr>
-                        <td>{{savingsname}}</td>
+                        <td>{{bankname}}</td>
                         <td>{{currentbalance}}</td>
                         <td><a href="#" onclick="$('#deposit{{bid}}').modal('show')"  class="btn btn-embossed btn-success btn-sm depo">Deposit</a></td>
                         <td><a href="#" onclick="$('#withdraw{{bid}}').modal('show')" class="btn btn-embossed btn-purple btn-sm withdr">Withdraw</a></td>
-                        <td><a data-href="{{homeUrl}}/mysavings/delete/{{bid}}" data-toggle="modal" data-target="#confirm-delete" class="btn btn-embossed btn-danger btn-sm">Delete</a></td>
+                        <td><a data-href="{{homeUrl}}/mybanks/delete/{{bid}}" data-toggle="modal" data-target="#confirm-delete" class="btn btn-embossed btn-danger btn-sm">Delete</a></td>
                     </tr>
                     <div id="withdraw{{bid}}" class="modal fade">
                         <div class="modal-dialog">
@@ -61,7 +61,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">Withdraw Money from {{savingsname}} </h4>
+                                        <h4 class="modal-title">Withdraw Money from {{bankname}} </h4>
                                     </div>
                                     <div class="modal-body">
                                         <div class="input-icon">
@@ -84,7 +84,7 @@
                                         <br>
                                         <label >
                                             <input type="checkbox" name="wall" value="1" data-toggle="checkbox" checked=""/>
-                                            Deposit this amount into Checking?
+                                            Add this amout to your wallet?
                                         </label>
 
                                     </div>
@@ -106,7 +106,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">Deposit Money To {{savingsname}} </h4>
+                                        <h4 class="modal-title">Deposit Money To {{bankname}} </h4>
                                     </div>
                                     <div class="modal-body">
                                         <div class="input-icon">
@@ -136,7 +136,7 @@
                 </tbody>
             </table>
         {{else}}
-            <h3 class="text-center">Accounts and Financial Goals are displayed here.</h3>
+            <h3 class="text-center">Your ACCOUNTS AND SAVINGS GOALS will be shown here.</h3>
         {{/if}}
     </div>
 </div>

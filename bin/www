@@ -20,8 +20,7 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-// if process.env.NODE_ENV=development
-//or production
+
 /**
  * Listen on provided port, on all network interfaces.
  */

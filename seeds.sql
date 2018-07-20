@@ -1,33 +1,25 @@
+DROP TABLE IF EXISTS `banks`;
 
-USE kindercash;
-DROP TABLE IF EXISTS `savings`;
-
-CREATE TABLE `savings` (
+CREATE TABLE `banks` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `savingsname` varchar(255) DEFAULT NULL,
+  `bankname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `savings` WRITE;
+LOCK TABLES `banks` WRITE;
 
 
-
-INSERT INTO `savings` (`id`, `savingsname`)
+INSERT INTO `banks` (`id`, `bankname`)
 VALUES
 	(2,'Checking Account'),
 	(3,'Savings Account - Unallocated'),
 	(4,'First Car'),
 	(5,'College Fund'),
-	(6,'First Home'),
-    (7,'Senior Trip'),
-    (8, 'Trip to Theme Park');
+	(6,'First Home');
 
 
 UNLOCK TABLES;
 
-
-# Dump of table deposit
-# ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `deposit`;
 
@@ -44,34 +36,31 @@ LOCK TABLES `deposit` WRITE;
 
 INSERT INTO `deposit` (`uid`, `bid`, `amount`, `description`, `dtime`)
 VALUES
-	(2,2,1000,'Initial Check','2017-08-14'),
-	(2,3,75000,'Order from XYZ','2017-08-15'),
-	(2,2,100,'Check after db change','2017-08-14'),
-	(2,2,15000,'House Rent','2017-08-14'),
-	(2,2,100000,'For Semester Fee','2017-08-15'),
-	(2,2,7000,'from home','2017-08-15'),
-	(2,4,10000,'Sample','2017-08-16');
+	(2,2,1000,'Initial Check','2018-07-14'),
+	(2,3,75000,'Order from XYZ','2018-07-15'),
+	(2,2,100,'Check after db change','2018-07-14'),
+	(2,2,15000,'House Rent','2018-07-14'),
+	(2,2,100000,'For Semester Fee','2018-07-15'),
+	(2,2,7000,'from home','2018-07-15'),
+	(2,4,10000,'Sample','2018-07-16');
 
 
 UNLOCK TABLES;
 
 
-# Dump of table mysavings
-# ------------------------------------------------------------
+DROP TABLE IF EXISTS `mybanks`;
 
-DROP TABLE IF EXISTS `mysavings`;
-
-CREATE TABLE `mysavings` (
+CREATE TABLE `mybanks` (
   `uid` int(11) NOT NULL,
   `bid` int(11) NOT NULL,
   `currentbalance` int(11) DEFAULT NULL,
   PRIMARY KEY (`uid`,`bid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `mysavings` WRITE;
+LOCK TABLES `mybanks` WRITE;
 
 
-INSERT INTO `mysavings` (`uid`, `bid`, `currentbalance`)
+INSERT INTO `mybanks` (`uid`, `bid`, `currentbalance`)
 VALUES
 	(2,2,10100),
 	(2,3,75200),
@@ -81,9 +70,6 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table users
-# ------------------------------------------------------------
-
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
@@ -91,79 +77,69 @@ CREATE TABLE `users` (
   `name` varchar(250) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL,
   `password` varchar(500) DEFAULT NULL,
-  `checking` int(11) unsigned DEFAULT '0',
+  `wallet` int(11) unsigned DEFAULT '0',
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `users` WRITE;
 
 
-INSERT INTO `users` (`uid`, `name`, `email`, `password`, `checking`)
+INSERT INTO `users` (`uid`, `name`, `email`, `password`, `wallet`)
 VALUES
 	(2,'DJ Turner','DJTurner4U@gmail.com','$2a$10$x5e0Mr.SznqpIeBZIqoXNOmZdC3D6vQu.4BQqGnEmU3d.snUQzHWy',22500);
 
 
-
 UNLOCK TABLES;
 
+DROP TABLE IF EXISTS `wallet_add`;
 
-# Dump of table checking_add
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `checking_add`;
-
-CREATE TABLE `checking_add` (
+CREATE TABLE `wallet_add` (
   `uid` int(11) NOT NULL,
   `amount` int(11) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `dtime` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `checking_add` WRITE;
-/*!40000 ALTER TABLE `checking_add` DISABLE KEYS */;
+LOCK TABLES `wallet_add` WRITE;
 
-INSERT INTO `checking_add` (`uid`, `amount`, `description`, `dtime`)
+
+INSERT INTO `wallet_add` (`uid`, `amount`, `description`, `dtime`)
 VALUES
-	(2,1500,'Testing','2018-07-16'),
+	(2,1500,'From NSU For Contest','2018-07-16'),
 	(2,500,'Test','2018-07-16'),
 	(2,1000,'Test 2','2018-07-16'),
 	(2,1000,'Test 3','2018-07-16'),
 	(2,1000,'Test 4','2018-07-16'),
 	(2,2000,'Testing From Another Page','2018-07-16'),
-	(8,10000,'From Auntie DJ','2018-07-20'),
-	(2,2000,'Checking new bug fix #FromAccount','2018-07-03');
-/*!40000 ALTER TABLE `checking_add` ENABLE KEYS */;
+	(8,10000,'From Home For House Rent','2018-07-20'),
+	(2,2000,'Checking new bug fix #FromBank','2018-07-03');
+
+
 UNLOCK TABLES;
 
 
-# Dump of table checking_spent
-# ------------------------------------------------------------
+DROP TABLE IF EXISTS `wallet_spent`;
 
-DROP TABLE IF EXISTS `checking_spent`;
-
-CREATE TABLE `checking_spent` (
+CREATE TABLE `wallet_spent` (
   `uid` int(11) NOT NULL,
   `amount` int(11) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `dtime` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `checking_spent` WRITE;
-/*!40000 ALTER TABLE `checking_spent` DISABLE KEYS */;
+LOCK TABLES `wallet_spent` WRITE;
 
-INSERT INTO `checking_spent` (`uid`, `amount`, `description`, `dtime`)
+
+INSERT INTO `wallet_spent` (`uid`, `amount`, `description`, `dtime`)
 VALUES
-	(2,2000,'Candy','2018-07-14'),
-	(2,30,'Movies','2018-07-14'),
-	(2,970,'Checking','2018-07-14'),
-	(2,1500,'Checking From Another Page','2018-07-14');
+	(2,2000,'Movie with Friends','2018-07-11'),
+	(2,30,'Rickshaw','2018-07-12'),
+	(2,970,'Checking','2018-07-11'),
+	(2,1500,'Checking From Another Page','2018-07-12');
 
-/*!40000 ALTER TABLE `checking_spent` ENABLE KEYS */;
+
 UNLOCK TABLES;
 
-
-# Dump of table withdraw
-# ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `withdraw`;
 
@@ -172,62 +148,20 @@ CREATE TABLE `withdraw` (
   `bid` int(11) NOT NULL,
   `amount` int(11) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
-  `checking` tinyint(1) DEFAULT NULL,
+  `wallet` tinyint(1) DEFAULT NULL,
   `dtime` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `withdraw` WRITE;
-/*!40000 ALTER TABLE `withdraw` DISABLE KEYS */;
 
-INSERT INTO `withdraw` (`uid`, `bid`, `amount`, `description`, `checking`, `dtime`)
+
+INSERT INTO `withdraw` (`uid`, `bid`, `amount`, `description`, `wallet`, `dtime`)
 VALUES
-	(2,3,1000,'Withdraw Check',1,'2018-07-14'),
-	(2,2,15000,'Candy',1,'2018-07-14'),
-	(2,2,95000,'Movies',0,'2018-07-14'),
-	(2,4,2000,'Brother Bday Present',1,'2018-07-14'),
-	(2,2,2000,'Checking new bug fix',1,'2018-07-14');
-
-/*!40000 ALTER TABLE `withdraw` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table badges
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `badges`;
-
-CREATE TABLE `badges` (
-  `uid` int(11) NOT NULL,
-  `badge1` BOOLEAN DEFAULT false,
-  `badge2` BOOLEAN DEFAULT false,
-  `badge3` BOOLEAN DEFAULT false,
-  `badge4` BOOLEAN DEFAULT false,
-  `badge5` BOOLEAN DEFAULT false,
-  `badge6` BOOLEAN DEFAULT false,
-  `badge7` BOOLEAN DEFAULT false,
-  `badge8` BOOLEAN DEFAULT false,
-  `badge9` BOOLEAN DEFAULT false,
-  `badge10` BOOLEAN DEFAULT false,
-  `badge11` BOOLEAN DEFAULT false,
-  `badge12` BOOLEAN DEFAULT false,
-  `badge13` BOOLEAN DEFAULT false,
-  `badge14` BOOLEAN DEFAULT false,
-  `badge15` BOOLEAN DEFAULT false,
-  `badge16` BOOLEAN DEFAULT false,
-  `badge17` BOOLEAN DEFAULT false,
-  `badge18` BOOLEAN DEFAULT false,
-  `badge19` BOOLEAN DEFAULT false,
-  `badge20` BOOLEAN DEFAULT false,
-  
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `badges` WRITE;
-
-
-INSERT INTO `badges` (`uid`, `badge1`, `badge2`, `badge3`, `badge4`, `badge5`, `badge6`, `badge7`, `badge8`, `badge9`, `badge10`, `badge11`, `badge12`, `badge13`, `badge14`, `badge15`, `badge16`, `badge17`, `badge18`, `badge19`, `badge20` )
-VALUES
-	(1,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);
-
+	(2,3,1000,'Withdraw Check',1,'2018-07-11'),
+	(2,2,15000,'Candy',1,'2018-07-11'),
+	(2,2,95000,'Field Trip',0,'2018-07-11'),
+	(2,4,2000,'Birthday Present for Friend',1,'2018-07-12'),
+	(2,2,2000,'Checking new bug fix',1,'2018-07-11');
 
 
 UNLOCK TABLES;

@@ -4,11 +4,8 @@ module.exports = function (app,passport) {
 
 
     app.get('/',dataController.showHome);
-    app.get('/identify',dataController.Identify);
     app.get('/login',dataController.showLogin);
     app.get('/signup',dataController.showSignup);
-    app.get('/chat', dataController.chat);
-    app.get('/news', dataController.news);
 
 
     // process the login form
@@ -34,31 +31,30 @@ module.exports = function (app,passport) {
         res.redirect('/');
     });
 
+    app.get('/admin/addbank',dataController.showAddBankAdmin);
+    app.post('/admin/addbank',dataController.postAddBankAdmin);
 
-    app.get('/admin/addsavings',dataController.showAddSavingsAdmin);
-    app.post('/admin/addsavings',dataController.postAddSavingsAdmin);
+    app.get('/mybanks',isLoggedIn,dataController.showMyBanks);
+    app.post('/mybanks',isLoggedIn,dataController.addMyBanks);
 
-    app.get('/mysavings',isLoggedIn,dataController.showMySavings);
-    app.post('/mysavings',isLoggedIn,dataController.addMySavings);
-
-    app.get('/mysavings/delete/:bid',isLoggedIn,dataController.deleteMySavings);
+    app.get('/mybanks/delete/:bid',isLoggedIn,dataController.deleteMyBanks);
 
     app.post('/user/process/withdraw',isLoggedIn,dataController.processWithdraw);
     app.post('/user/process/deposit',isLoggedIn,dataController.processDeposit);
 
-    app.post('/user/process/checkingAdd',isLoggedIn,dataController.processCheckingAdd);
-    app.post('/user/process/checkingSpent',isLoggedIn,dataController.processCheckingSpent);
+    app.post('/user/process/walletAdd',isLoggedIn,dataController.processWalletAdd);
+    app.post('/user/process/walletSpent',isLoggedIn,dataController.processWalletSpent);
 
 
     app.get('/profile',isLoggedIn,dataController.showMyProfile);
     app.post('/profile', isLoggedIn, dataController.processChangePass);
 
-    app.get('/checking/stats',isLoggedIn,dataController.showSearchChecking);
-    app.post('/checking/stats',isLoggedIn,dataController.processSearchChecking);
+    app.get('/wallet/stats',isLoggedIn,dataController.showSearchWallet);
+    app.post('/wallet/stats',isLoggedIn,dataController.processSearchWallet);
 
 
-    app.get('/savings/stats',isLoggedIn,dataController.showSavingsStats);
-    app.post('/savings/stats',isLoggedIn,dataController.processSavingsStats);
+    app.get('/bank/stats',isLoggedIn,dataController.showBankStats);
+    app.post('/bank/stats',isLoggedIn,dataController.processBankStats);
 
 };
 

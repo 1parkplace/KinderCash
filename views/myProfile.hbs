@@ -7,14 +7,13 @@
             </div>
         {{/if}}
         <br>
-<!-- Profile Card End-->
-
-        <div class="tile tile-profile col-md-6 col-centered" id="profileTile">
-            <img class="img-tumbnail" id="profilePic" src="{{profilePic}}" alt="Profile Picture">
-            <h4 id="profileName">{{currentUser.name}}</h4>
-            <p id="profileName">{{currentUser.email}}</p>
+        <div class="tile tile-profile" style="background-color: #364347">
+            <img src="{{profilePic}}" alt="Kinder &#8364;ash">
+            <h4>{{currentUser.name}}</h4>
+            <p>{{currentUser.email}}</p>
             <hr>
-            <h4 id="profileName">Change Password</h4>
+            <h4>Change Password</h4>
+            <br>
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
@@ -29,17 +28,13 @@
                             <input type="password" class="form-control" name="newpassword" placeholder="New Password">
                         </div>
                         <br>
-                        <a href="#" class="btn btn-block login-button">Save</a>
+                        <a href="#" class="btn btn-block btn-danger btn-embossed login-button">Save</a>
                     </form>
                 </div>
                 <div class="col-md-2"></div>
             </div>
 
         </div>
-        <!-- Profile Card End-->
-
-
-
     </div>
     <div class="col-md-3"></div>
 </div>
