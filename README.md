@@ -56,5 +56,12 @@ To demo the login functionality please visit https://kindercash.herokuapp.com/
 
 Shared and Branched Repo
 ```
+Master:
 https://github.com/DJGilmore4U/KinderCash
+
+Contributor Branches:
+kinder - fcely
+DJ - DJGilmore4U
+Eric - enuanes
+spbranch - steniopereira
 ```
