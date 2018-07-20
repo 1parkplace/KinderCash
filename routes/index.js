@@ -7,6 +7,8 @@ module.exports = function (app,passport) {
     app.get('/identify',dataController.Identify);
     app.get('/login',dataController.showLogin);
     app.get('/signup',dataController.showSignup);
+    app.get('/chat', dataController.chat);
+    app.get('/news', dataController.news);
 
 
     // process the login form
@@ -31,6 +33,7 @@ module.exports = function (app,passport) {
         req.logout();
         res.redirect('/');
     });
+
 
     app.get('/admin/addsavings',dataController.showAddSavingsAdmin);
     app.post('/admin/addsavings',dataController.postAddSavingsAdmin);

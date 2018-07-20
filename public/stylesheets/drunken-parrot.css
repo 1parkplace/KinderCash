@@ -2168,12 +2168,13 @@ select[multiple].input-lg {
   border-bottom: 2px solid #d6e1e5;
   font-family: "SourceSansProSemiBold", Helvetica, Arial, sans-serif;
 }
+
 .tile {
   border-radius: 6px;
   padding: 35px 25px 40px 25px;
   position: relative;
-  text-align: center;
 }
+
 .tile-profile {
   background-color: #fad46b;
 }
@@ -2191,8 +2192,9 @@ select[multiple].input-lg {
   text-transform: uppercase;
 }
 .tile-login {
-  background: #364347;
+  background: #7B67AA;
   padding-bottom: 55px;
+
 }
 .tile-login .logo {
   margin-bottom: 40px;

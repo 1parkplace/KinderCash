@@ -8,11 +8,15 @@ router.showHome = function(req, res){
     getSavings(function(res){
         SavingsList = res;
     });
-    res.render('index', { title: 'Welcome to Kinder&#8364;ash - Beta',pageTitle:'Home',message:req.flash('message')});
+    res.render('index', { title: 'Welcome to KinderCash - Beta',pageTitle:'Home',message:req.flash('message')});
 };
 
-router.showChat= function(req,res){
+router.chat= function(req,res){
     res.render('chat');
+};
+
+router.news=function(req,res){
+    res.send('<script>window.location.href="https://tinyurl.com/KinderCash";</script>');
 }
 
 router.Identify = function(req,res){

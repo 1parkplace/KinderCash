@@ -24,6 +24,9 @@ exports.signin = function(req,res){
 	res.render('signin'); 
 
 }
+exports.chat = function(req,res){
+  res.render('chat');
+}
 
 exports.signinERROR = function(req,res){
 
@@ -42,6 +45,10 @@ exports.dashboard = function(req,res){
 
 }
 
+exports.news= function(req,res){
+  res.send('<script>window.location.href="https://tinyurl.com/KinderCash";</script>');
+}
+
 exports.logout = function(req,res){
 
   req.session.destroy(function(err) {
@@ -49,8 +56,4 @@ exports.logout = function(req,res){
   res.render('signout'); 
   });
 
-}
-
-exports.chat = function(req-res){
-  res.render('chat');
 }

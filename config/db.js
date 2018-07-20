@@ -23,7 +23,8 @@ module.exports = {
        "password": "zkxonv4c7hf9i0zo",
        "database": "gzpd7dwapcp646gx",
        "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-       "dialect": "mysql"
+       "dialect": "mysql",
+       multipleStatements: true
     },
 
     'connection': {
