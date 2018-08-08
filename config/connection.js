@@ -13,10 +13,10 @@ if (process.env.JAWSDB_URL) {
     // Set up our connection information
     connection = mysql.createConnection({
         port: 3306,
-        host: "localhost",
-        user: "root",
-        password: "root",
-        database: "KinderCash"
+        host: "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        username: "ikh1gzw4tupt1ac8",
+        password: "kxh5cam6lc08ce0j",
+        database: "ozk8vv6bx6eaqf5q",
     });
 }
 

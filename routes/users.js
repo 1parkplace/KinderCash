@@ -5,10 +5,10 @@ var db = require('./db.js');
 var bcrypt = require('bcrypt-nodejs');
 
 router.showHome = function(req, res){
-    getSavings(function(res){
-        SavingsList = res;
-    });
-    res.render('index', { title: 'Welcome to Kinder&#8364;ash - Beta',pageTitle:'Home',message:req.flash('message')});
+    // getSavings(function(res){
+    //     SavingsList = res;
+    // });
+    res.render('index', { title: 'Welcome to KinderCash',pageTitle:'Home',message:req.flash('message')});
 };
 
 router.Identify = function(req,res){
@@ -16,21 +16,21 @@ router.Identify = function(req,res){
 };
 
 router.showLogin = function (req, res) {
-    res.render('login',{pageTitle:'Kinder&#8364;ash Login',currentUser: req.user, message: req.flash('loginMessage')});
+    res.render('login',{pageTitle:'Login',currentUser: req.user, message: req.flash('loginMessage')});
 };
 
 router.showSignup = function (req, res) {
-    res.render('signup',{pageTitle:'Kinder&#8364;ash Sign Up',currentUser: req.user, message: req.flash('signupMessage')});
+    res.render('signup',{pageTitle:'Sign Up',currentUser: req.user, message: req.flash('signupMessage')});
 };
 
 var SavingsList = [];
 
-function getSavings(cb) {
-    db.query('SELECT * From savings', function (error, results, fields) {
-        if (error) throw error;
-        cb(results);
-    });
-}
+// function getSavings(cb) {
+//     db.query('SELECT * From savings', function (error, results, fields) {
+//         if (error) throw error;
+//         cb(results);
+//     });
+// }
 
 router.showAddSavingsAdmin = function (req, res) {
     getSavings(function(res){

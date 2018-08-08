@@ -4,7 +4,6 @@ module.exports = function (app,passport) {
 
 
     app.get('/',dataController.showHome);
-    app.get('/identify',dataController.Identify);
     app.get('/login',dataController.showLogin);
     app.get('/signup',dataController.showSignup);
 

@@ -19,8 +19,8 @@ VALUES
 	(4,'First Car'),
 	(5,'College Fund'),
 	(6,'First Home'),
-    (7,'Senior Trip'),
-    (8, 'Trip to Theme Park');
+  (7,'Senior Trip'),
+  (8, 'Trip to Theme Park');
 
 
 UNLOCK TABLES;

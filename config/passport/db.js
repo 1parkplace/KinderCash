@@ -1,10 +1,10 @@
 module.exports = {
  
     "development": {
-        "username": "sq6vji29as4zey8a",
-        "password": "zkxonv4c7hf9i0zo",
-        "database": "gzpd7dwapcp646gx",
-        "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "username": "root",
+        "password": "root",
+        "database": "kindercash",
+        "host": "localhost",
         "dialect": "mysql"
     },
    

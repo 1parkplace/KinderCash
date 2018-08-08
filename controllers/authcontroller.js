@@ -19,9 +19,9 @@ exports.signupERROR = function(req,res){
 
 }
 
-exports.signin = function(req,res){
+exports.login = function(req,res){
 
-	res.render('signin'); 
+	res.render('login'); 
 
 }
 

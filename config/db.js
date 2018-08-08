@@ -1,40 +1,59 @@
 module.exports = {
  
     "development": {
-        "port"    : 3306,
-        "username": "root",
-        "password": "root",
-        "database": "kindercash",
-        "host": "locatlhost",
+        // "port"    : 3306,
+        // "username": "root",
+        // "password": "root",
+        // "database": "kindercash",
+        // "host": "localhost",
+        // "dialect": "mysql",
+        // multipleStatements: true
+        "username": "ikh1gzw4tupt1ac8",
+        "password": "kxh5cam6lc08ce0j",
+        "database": "ozk8vv6bx6eaqf5q",
+        "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         "dialect": "mysql",
         multipleStatements: true
     },
    
     "test": {
-        "username": "root",
-        "password": "root",
-        "database": "sequelize_passport",
-        "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql"
+        // "username": "root",
+        // "password": "root",
+        // "database": "sequelize_passport",
+        // "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        // "dialect": "mysql"
+        "username": "ikh1gzw4tupt1ac8",
+        "password": "kxh5cam6lc08ce0j",
+        "database": "ozk8vv6bx6eaqf5q",
+        "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql",
+        multipleStatements: true
     },
    
     "production": {
-       "username": "sq6vji29as4zey8a",
-       "password": "zkxonv4c7hf9i0zo",
-       "database": "gzpd7dwapcp646gx",
-       "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-       "dialect": "mysql"
+       "username": "ikh1gzw4tupt1ac8",
+       "password": "kxh5cam6lc08ce0j",
+       "database": "ozk8vv6bx6eaqf5q",
+       "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+       "dialect": "mysql",
+       multipleStatements: true
     },
 
     'connection': {
-        port:3306,
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database: 'kindercash',
+        // port:3306,
+        // host: 'localhost',
+        // user: 'root',
+        // password: 'root',
+        // database: 'kindercash',
+        // multipleStatements: true
+        "username": "ikh1gzw4tupt1ac8",
+        "password": "kxh5cam6lc08ce0j",
+        "database": "ozk8vv6bx6eaqf5q",
+        "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql",
         multipleStatements: true
     },
-    'database': 'kindercash',
-    'users_table': 'users'
+    // 'database': 'kindercash',
+    // 'users_table': 'users'
    
    };
