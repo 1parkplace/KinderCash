@@ -8,7 +8,7 @@ module.exports = {
         // "host": "localhost",
         // "dialect": "mysql",
         // multipleStatements: true
-        "username": "ikh1gzw4tupt1ac8",
+        "user": "ikh1gzw4tupt1ac8",
         "password": "kxh5cam6lc08ce0j",
         "database": "ozk8vv6bx6eaqf5q",
         "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
@@ -22,7 +22,7 @@ module.exports = {
         // "database": "sequelize_passport",
         // "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         // "dialect": "mysql"
-        "username": "ikh1gzw4tupt1ac8",
+        "user": "ikh1gzw4tupt1ac8",
         "password": "kxh5cam6lc08ce0j",
         "database": "ozk8vv6bx6eaqf5q",
         "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
@@ -31,7 +31,7 @@ module.exports = {
     },
    
     "production": {
-       "username": "ikh1gzw4tupt1ac8",
+       "user": "ikh1gzw4tupt1ac8",
        "password": "kxh5cam6lc08ce0j",
        "database": "ozk8vv6bx6eaqf5q",
        "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
@@ -46,7 +46,7 @@ module.exports = {
         // password: 'root',
         // database: 'kindercash',
         // multipleStatements: true
-        "username": "ikh1gzw4tupt1ac8",
+        "user": "ikh1gzw4tupt1ac8",
         "password": "kxh5cam6lc08ce0j",
         "database": "ozk8vv6bx6eaqf5q",
         "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
